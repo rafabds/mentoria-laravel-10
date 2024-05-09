@@ -23,7 +23,7 @@ services:
             - ./docker/nginx/:/etc/nginx/conf.d/
         networks:
             - sistema-getao-network
-     # db mysql ${DB_DATABASE} //Busca do arquivo .env
+    # db mysql ${DB_DATABASE} //Busca do arquivo .env
     mysql:
         container_name: banco-mysql
         image: mysql:5.7.22
@@ -65,4 +65,3 @@ networks:
 # servidor: mysql
 # user: root
 # pass: root
-
