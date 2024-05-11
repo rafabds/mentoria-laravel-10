@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+//prefix é utilizado para refaturação, isso facilita muito na organização.
+//Nesse caso abaixo, ele vai dizer tudo que vem abaixo de Produtos está dentro dele
+Route::prefix('produtos')->group(function () {
+    Route::get('/', [ProdutosController::class, 'index'])->name('produto.index');
+});
+    
