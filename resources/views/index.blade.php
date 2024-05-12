@@ -202,6 +202,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js">
     </script><script src="/js/dashboard.js"></script>
     <script src="/js/color-modes.js"></script>
+    <script src="/js/projeto.js"></script>
+    {{-- INPUTMASK --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jequery.mask/1.14.10/jquery.mask.js"></script>
 </body>
     
     </html>
