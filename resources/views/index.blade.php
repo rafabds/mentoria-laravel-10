@@ -204,7 +204,9 @@
     <script src="/js/color-modes.js"></script>
     <script src="/js/projeto.js"></script>
     {{-- INPUTMASK --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jequery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
 </body>
     
     </html>

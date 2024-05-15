@@ -26,3 +26,7 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
         });
     }
 }
+
+$(document).ready(function() {
+    $('#mascara_valor').mask('#.##0,00', { reverse: true });
+  });
