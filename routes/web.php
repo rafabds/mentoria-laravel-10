@@ -21,9 +21,13 @@ Route::get('/', function () {
 //prefix é utilizado para refaturação, isso facilita muito na organização.
 //Nesse caso abaixo, ele vai dizer tudo que vem abaixo de Produtos está dentro dele
 Route::prefix('produtos')->group(function () {
-    Route::get('/', [ProdutosController::class, 'index'])->name('produto.index');
-    Route::get('/cadastrarProduto', [ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto');
-    Route::post('/cadastrarProduto', [ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto');
-    Route::delete('/delete', [ProdutosController::class, 'delete'])->name('produto.delete');
+    Route::get('/', [ProdutosController::class, 'index'])->name('produto.index'); //Index do projeto
+    Route::get('/cadastrarProduto', [ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto'); //Tela para cadastrar produto
+    Route::post('/cadastrarProduto', [ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto'); //Salvar o produto cadastrado no banco
+    Route::get('/atualizarProduto/{id}', [ProdutosController::class, 'atualizarProduto'])->name('atualizar.produto'); //Tela para atualizar produto
+    Route::put('/atualizarProduto/{id}', [ProdutosController::class, 'atualizarProduto'])->name('atualizar.produto'); //Atualizar o produto no banco
+
+    Route::delete('/delete', [ProdutosController::class, 'delete'])->name('produto.delete'); //Deletar o produto
+    
 });
     

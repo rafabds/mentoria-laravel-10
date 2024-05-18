@@ -17,7 +17,7 @@ class Componentes extends Model
             $dados = str_replace(',', '.', $valorParaFormatar);
         } else 
         {
-            if ($tamanho => 8 && $tamanho <= 10) 
+            if ($tamanho >= 8 && $tamanho <= 10) 
             {
                 $retiraVirgulaPorPonto = str_replace(',', '.', $valorParaFormatar);
                 $separaPorIndice = explode('.', $retiraVirgulaPorPonto);
