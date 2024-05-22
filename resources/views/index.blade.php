@@ -22,7 +22,7 @@
 <link rel="mask-icon" href="{{ asset('icones/safari-pinned-tab.svg"') }} color="#712cf9">
 <link rel="icon" href="{{ asset('icones/favicon.ico') }}">
 <meta name="theme-color" content="#712cf9">
-<script src="http://cdn.bootcss.com/toastr.js/lastest/js/toastr.min.js"></script>
+<link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
 
     <style>
@@ -196,21 +196,16 @@
         </div>
     </div>
     @yield('scripts')
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js">
-    </script><script src="/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"></script>
+    <script src="/js/dashboard.js"></script>
     <script src="/js/color-modes.js"></script>
     <script src="/js/projeto.js"></script>
-    {{-- INPUTMASK --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-
-    {{-- BlockUI --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
-    <script src="http://cdn.bootcss.com/toastr.js/lastest/js/toastr.min.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     {!! Toastr::message() !!}
 
 </body>

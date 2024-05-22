@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,8 +27,14 @@ Route::prefix('produtos')->group(function () {
     Route::post('/cadastrarProduto', [ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto'); //Salvar o produto cadastrado no banco
     Route::get('/atualizarProduto/{id}', [ProdutosController::class, 'atualizarProduto'])->name('atualizar.produto'); //Tela para atualizar produto
     Route::put('/atualizarProduto/{id}', [ProdutosController::class, 'atualizarProduto'])->name('atualizar.produto'); //Atualizar o produto no banco
-
-    Route::delete('/delete', [ProdutosController::class, 'delete'])->name('produto.delete'); //Deletar o produto
-    
+    Route::delete('/delete', [ProdutosController::class, 'delete'])->name('produto.delete'); //Deletar o produto  
 });
     
+Route::prefix('clientes')->group(function () {
+    Route::get('/', [ClientesController::class, 'index'])->name('clientes.index'); //Index do projeto
+    Route::get('/cadastrarCliente', [ClientesController::class, 'cadastrarCliente'])->name('cadastrar.cliente'); //Tela para cadastrar produto
+    Route::post('/cadastrarCliente', [ClientesController::class, 'cadastrarCliente'])->name('cadastrar.cliente'); //Salvar o produto cadastrado no banco
+    Route::get('/atualizarCliente/{id}', [ClientesController::class, 'atualizarCliente'])->name('atualizar.cliente'); //Tela para atualizar produto
+    Route::put('/atualizarCliente/{id}', [ClientesController::class, 'atualizarCliente'])->name('atualizar.cliente'); //Atualizar o produto no banco
+    Route::delete('/delete', [ClientesController::class, 'delete'])->name('cliente.delete'); //Deletar o produto  
+});
