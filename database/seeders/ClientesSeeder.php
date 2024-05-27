@@ -13,16 +13,16 @@ class ClientesSeeder extends Seeder
         Cliente::create([
             'nome' => 'Rafa',
             'email' => 'rafa_bs02@hotmail.com',
-            'endereco' => 'Seila',
+            'cidade' => 'Seila',
             'logradouro' => 'Rua Professor Hasegawa',
             'cep' => '08260090',
             'bairro' => 'colonia',
         ]);
 
         Cliente::create([
-            'nome' => 'Rafa02',
-            'email' => 'rafa_bs02@hotmail.com',
-            'endereco' => 'Seila',
+            'nome' => 'Rafa03',
+            'email' => 'rafa_bs03@hotmail.com',
+            'cidade' => 'Seila',
             'logradouro' => 'Rua Professor Hasegawa',
             'cep' => '08260090',
             'bairro' => 'colonia',

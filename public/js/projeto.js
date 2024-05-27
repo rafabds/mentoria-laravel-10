@@ -29,9 +29,9 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
 
 $(document).ready(function() {
     $('#mascara_valor').mask('#.##0,00', { reverse: true });
-  });
+});
 
-  $('#cep').blur(function() {
+$('#cep').blur(function() {
     var cep = $(this).val().replace(/\D/g, '');
     if(cep != ""){
         var validacep = /^[0-9]{8}$/;
@@ -46,9 +46,9 @@ $(document).ready(function() {
                     $("#cidade").val(dados.localidade.toUpperCase());
                 }
                 else {
-                    alert("CEP não encontrado de forma automatizado digite manualmente ou tente novamente.");
+                    alert("CEP não encontrado, por favor, digite novamente.");
                 }
             });
         }
     }
-  });
+});

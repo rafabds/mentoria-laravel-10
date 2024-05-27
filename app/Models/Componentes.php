@@ -13,18 +13,15 @@ class Componentes extends Model
     {
         $tamanho = strlen($valorParaFormatar);
         $dados = str_replace(',', '.', $valorParaFormatar);
-        if($tamanho <= 6) {
+        if ($tamanho <= 6) {
             $dados = str_replace(',', '.', $valorParaFormatar);
-        } else 
-        {
-            if ($tamanho >= 8 && $tamanho <= 10) 
-            {
+        } else {
+            if ($tamanho >= 8 && $tamanho <= 10) {
                 $retiraVirgulaPorPonto = str_replace(',', '.', $valorParaFormatar);
                 $separaPorIndice = explode('.', $retiraVirgulaPorPonto);
-                $dados = $separaPorindice[0] . $separaPorIndice[1];
+                $dados = $separaPorIndice[0] . $separaPorIndice[1];
             }
         }
         return $dados;
-        
     }
 }
