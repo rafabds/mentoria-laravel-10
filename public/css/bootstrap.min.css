@@ -381,12 +381,12 @@ sup {
 }
 
 a {
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    color: rgba(var(--bs-black), var(--bs-link-opacity, 1));
     text-decoration: underline
 }
 
 a:hover {
-    --bs-link-color-rgb: var(--bs-link-hover-color-rgb)
+    --bs-black: var(--bs-link-hover-color-rgb)
 }
 
 a:not([href]):not([class]),
@@ -3788,7 +3788,7 @@ fieldset:disabled .btn {
 
 .btn-link {
     --bs-btn-font-weight: 400;
-    --bs-btn-color: var(--bs-link-color);
+    --bs-btn-color: var(--bs-black);
     --bs-btn-bg: transparent;
     --bs-btn-border-color: transparent;
     --bs-btn-hover-color: var(--bs-link-hover-color);
@@ -4346,7 +4346,7 @@ fieldset:disabled .btn {
     --bs-nav-link-padding-x: 1rem;
     --bs-nav-link-padding-y: 0.5rem;
     --bs-nav-link-font-weight: ;
-    --bs-nav-link-color: var(--bs-link-color);
+    --bs-nav-link-color: var(----bs-black);
     --bs-nav-link-hover-color: var(--bs-link-hover-color);
     --bs-nav-link-disabled-color: var(--bs-secondary-color);
     display: flex;
@@ -5390,7 +5390,7 @@ fieldset:disabled .btn {
     --bs-pagination-padding-x: 0.75rem;
     --bs-pagination-padding-y: 0.375rem;
     --bs-pagination-font-size: 1rem;
-    --bs-pagination-color: var(--bs-link-color);
+    --bs-pagination-color: var(--bs-black-link-color);
     --bs-pagination-bg: var(--bs-body-bg);
     --bs-pagination-border-width: var(--bs-border-width);
     --bs-pagination-border-color: var(--bs-border-color);
@@ -7928,8 +7928,8 @@ fieldset:disabled .btn {
     display: inline-flex;
     gap: .375rem;
     align-items: center;
-    -webkit-text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
-    text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
+    -webkit-text-decoration-color: rgba(var(--bs-black), var(--bs-link-opacity, 0.5));
+    text-decoration-color: rgba(var(--bs-black), var(--bs-link-opacity, 0.5));
     text-underline-offset: 0.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden
@@ -9704,8 +9704,8 @@ fieldset:disabled .btn {
 
 .link-underline {
     --bs-link-underline-opacity: 1;
-    -webkit-text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
-    text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important
+    -webkit-text-decoration-color: rgba(var(--bs-black), var(--bs-link-underline-opacity, 1)) !important;
+    text-decoration-color: rgba(var(--bs-black), var(--bs-link-underline-opacity, 1)) !important
 }
 
 .link-underline-opacity-0 {

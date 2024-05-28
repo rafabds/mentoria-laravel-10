@@ -13,7 +13,7 @@ class ClientesSeeder extends Seeder
         Cliente::create([
             'nome' => 'Rafa',
             'email' => 'rafa_bs02@hotmail.com',
-            'cidade' => 'Seila',
+            'localidade' => 'Seila',
             'logradouro' => 'Rua Professor Hasegawa',
             'cep' => '08260090',
             'bairro' => 'colonia',
@@ -22,7 +22,7 @@ class ClientesSeeder extends Seeder
         Cliente::create([
             'nome' => 'Rafa03',
             'email' => 'rafa_bs03@hotmail.com',
-            'cidade' => 'Seila',
+            'localidade' => 'Seila',
             'logradouro' => 'Rua Professor Hasegawa',
             'cep' => '08260090',
             'bairro' => 'colonia',

@@ -9,15 +9,16 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                        <svg class="bi">
+                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
+                        href="{{ route('dashboard.index') }}">
+                        <svg class="bi black">
                             <use xlink:href="#house-fill" />
                         </svg>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('vendas.index')}}">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('vendas.index') }}">
                         <svg class="bi">
                             <use xlink:href="#file-earmark" />
                         </svg>
@@ -25,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('produto.index')}}">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('produto.index') }}">
                         <svg class="bi">
                             <use xlink:href="#cart" />
                         </svg>
@@ -38,6 +39,14 @@
                             <use xlink:href="#people" />
                         </svg>
                         Clientes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('usuario.index') }}">
+                        <svg class="bi">
+                            <use xlink:href="#people" />
+                        </svg>
+                        Usuário
                     </a>
                 </li>
             </ul>

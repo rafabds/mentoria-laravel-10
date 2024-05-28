@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\VendaController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+});
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index'); //Index do projeto
 });
 
 //prefix é utilizado para refaturação, isso facilita muito na organização.
@@ -47,4 +53,11 @@ Route::prefix('vendas')->group(function () {
     Route::get('/enviaComprovantePorEmail/{numero_da_venda}', [VendaController::class, 'enviaComprovantePorEmail'])->name("enviaComprovantePorEmail.venda");
 });
 
-
+Route::prefix('usuario')->group(function () {
+    Route::get('/', [UsuarioController::class, 'index'])->name('usuario.index'); //Index do projeto
+    Route::get('/cadastrarUsuario', [UsuarioController::class, 'cadastrarUsuario'])->name('cadastrar.usuario'); //Tela para cadastrar produto
+    Route::post('/cadastrarUsuario', [UsuarioController::class, 'cadastrarUsuario'])->name('cadastrar.usuario'); //Salvar o produto cadastrado no banco
+    Route::get('/atualizarUsuario/{id}', [UsuarioController::class, 'atualizarUsuario'])->name('atualizar.usuario'); //Tela para atualizar produto
+    Route::put('/atualizarUsuario/{id}', [UsuarioController::class, 'atualizarUsuario'])->name('atualizar.usuario'); //Atualizar o produto no banco
+    Route::delete('/delete', [UsuarioController::class, 'delete'])->name('usuario.delete'); //Deletar o produto
+});
